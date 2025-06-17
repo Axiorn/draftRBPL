@@ -14,8 +14,6 @@ use App\Http\Controllers\LandingController;
 |
 */
 
-// Route::get('/', function () { return view('landing'); });
-// Route::get('/produk', function () { return view('produk'); });
 Route::get('/', [LandingController::class, 'landing'])->name('landing');
 Route::get('/produk', [LandingController::class, 'produk'])->name('produk');
 Route::get('/status', [LandingController::class, 'status'])->name('status');
