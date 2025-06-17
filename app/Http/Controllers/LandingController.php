@@ -13,4 +13,8 @@ class LandingController extends Controller {
     {
         return view('produk');
     }
+    public function status()
+    {
+        return view('status');
+    }
 }
