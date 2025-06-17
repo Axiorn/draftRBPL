@@ -16,7 +16,7 @@
     <div class="flex items-center space-x-8">
       <a href="{{ route('landing') }}" class="text-green-900 font-medium">HOME</a>
       <a href="{{ route('produk') }}" class="text-green-900 font-medium">PRODUCT</a>
-      <a href="#" class="text-green-900 font-medium">STATUS</a>
+      <a href="{{ route('status') }}" class="text-green-900 font-medium">STATUS</a>
     </div>
     <div class="flex items-center space-x-6">
       <div class="relative">
