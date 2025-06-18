@@ -28,5 +28,20 @@ class LandingController extends Controller {
     public function checkout()
     {
         return view('checkout');
+    public function tambahProduk()
+    {
+        return view('tambahProduk');
+    }
+    public function kelolaStok()
+    {
+        return view('kelolaStok');
+    }
+    public function riwayatPembelian()
+    {
+        return view('riwayatPembelian');
+    }
+    public function owner()
+    {
+        return view('owner');
     }
 }
