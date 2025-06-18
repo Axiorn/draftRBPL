@@ -21,4 +21,16 @@ class LandingController extends Controller {
     {
         return view('admin');
     }
+    public function tambahProduk()
+    {
+        return view('tambahProduk');
+    }
+    public function kelolaStok()
+    {
+        return view('kelolaStok');
+    }
+    public function riwayatPembelian()
+    {
+        return view('riwayatPembelian');
+    }
 }

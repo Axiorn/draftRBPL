@@ -34,67 +34,29 @@
 
   <!-- Main Content -->
   <main class="flex-1 bg-[#f5f5f5] text-black p-10 overflow-y-auto">
-    
-    <!-- Dashboard Admin -->
-    <section id="dashboardAdmin" class="section">
-      <h1 class="text-2xl font-semibold">Dashboard</h1>
-  <div class="grid grid-cols-4 gap-4">
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pengunjung</p>
-      <p class="text-xl font-bold">176</p>
-      <p class="text-green-500 text-sm mt-1">↑ 8%</p>
-    </div>
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pesanan</p>
-      <p class="text-xl font-bold">641</p>
-      <p class="text-green-500 text-sm mt-1">↑ 5%</p>
-    </div>
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pendapatan</p>
-      <p class="text-xl font-bold">Rp. 98.565.000</p>
-      <p class="text-green-500 text-sm mt-1">↑ 4%</p>
-    </div>
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pengiriman</p>
-      <p class="text-xl font-bold">635</p>
-      <p class="text-green-500 text-sm mt-1">↑ 3%</p>
-    </div>
+    <!-- Riwayat Pembelian -->
+    <section id="riwayatPembelian" class="section">
+      <h1 class="text-2xl font-semibold mb-4">Riwayat Pembelian</h1>
+
+  <div class="flex space-x-2 mb-4">
+    <button class="bg-green-600 text-white px-4 py-1 rounded">Semua</button>
+    <button class="bg-gray-200 px-4 py-1 rounded">Belum Bayar</button>
+    <button class="bg-gray-200 px-4 py-1 rounded">Diproses</button>
+    <button class="bg-gray-200 px-4 py-1 rounded">Dikirim</button>
+    <button class="bg-gray-200 px-4 py-1 rounded">Selesai</button>
+    <button class="bg-gray-200 px-4 py-1 rounded">Dibatalkan</button>
   </div>
 
-  <div class="bg-white rounded-xl shadow p-6 mt-4">
-    <h2 class="text-lg font-semibold mb-2">Chart Reports</h2>
-    <div class="h-40 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 italic">
-      Grafik dummy
+  <!-- Contoh 1 Pesanan -->
+  <div class="bg-white p-4 rounded-xl shadow space-y-2">
+    <p class="font-semibold">Order ID: 3354654654526</p>
+    <p>Gamis Wanita Yasmine Dress - Maroon, XS (x1)</p>
+    <p class="text-green-600 font-bold">Rp 365.000</p>
+    <p class="text-sm text-gray-500">Tanggal Pemesanan: 10 Januari 2025 • Estimasi: 15–17 Januari 2025</p>
+    <div class="flex justify-between">
+      <button class="text-sm text-gray-600 border rounded px-3 py-1">Invoice</button>
+      <button class="bg-green-600 text-white text-sm rounded px-3 py-1">Pantau Pengiriman</button>
     </div>
-  </div>
-
-  <div class="bg-white rounded-xl shadow p-6 mt-4">
-    <h2 class="text-lg font-semibold mb-4">Produk Terbaru</h2>
-    <table class="w-full table-auto text-sm">
-      <thead class="text-left text-gray-500">
-        <tr>
-          <th class="py-2">Produk ID</th>
-          <th>Nama Produk</th>
-          <th>Kategori</th>
-          <th>Harga</th>
-          <th>Stok</th>
-          <th>Status</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody class="text-gray-700">
-        <tr>
-          <td class="py-2">#123456</td>
-          <td>Nalasha Gamis Cantik</td>
-          <td>Gamis</td>
-          <td>Rp 250.000</td>
-          <td>45</td>
-          <td><span class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs">Aktif</span></td>
-          <td><button class="text-sm text-blue-600 mr-2">Edit</button><button class="text-sm text-red-600">Hapus</button></td>
-        </tr>
-        <!-- Tambahkan produk lainnya di sini -->
-      </tbody>
-    </table>
   </div>
     </section>
   </main>
@@ -102,6 +64,7 @@
 
 <!-- Script SPA -->
 <script>
+
   links.forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();

@@ -34,73 +34,63 @@
 
   <!-- Main Content -->
   <main class="flex-1 bg-[#f5f5f5] text-black p-10 overflow-y-auto">
-    
-    <!-- Dashboard Admin -->
-    <section id="dashboardAdmin" class="section">
-      <h1 class="text-2xl font-semibold">Dashboard</h1>
+    <!-- Kelola Stok -->
+    <section id="kelolaStok" class="section">
+      <h1 class="text-2xl font-semibold mb-4">Kelola Stok Produk</h1>
+
   <div class="grid grid-cols-4 gap-4">
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pengunjung</p>
-      <p class="text-xl font-bold">176</p>
-      <p class="text-green-500 text-sm mt-1">↑ 8%</p>
+    <div class="bg-white p-4 rounded-xl shadow">
+      <p class="text-sm text-gray-500">Total Products</p>
+      <p class="text-lg font-bold">86</p>
     </div>
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pesanan</p>
-      <p class="text-xl font-bold">641</p>
-      <p class="text-green-500 text-sm mt-1">↑ 5%</p>
+    <div class="bg-white p-4 rounded-xl shadow">
+      <p class="text-sm text-gray-500">Low Stock Items</p>
+      <p class="text-lg font-bold">12</p>
     </div>
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pendapatan</p>
-      <p class="text-xl font-bold">Rp. 98.565.000</p>
-      <p class="text-green-500 text-sm mt-1">↑ 4%</p>
+    <div class="bg-white p-4 rounded-xl shadow">
+      <p class="text-sm text-gray-500">Out of Stock</p>
+      <p class="text-lg font-bold">3</p>
     </div>
-    <div class="p-4 bg-white rounded-xl shadow">
-      <p class="text-sm text-gray-500">Total Pengiriman</p>
-      <p class="text-xl font-bold">635</p>
-      <p class="text-green-500 text-sm mt-1">↑ 3%</p>
+    <div class="bg-white p-4 rounded-xl shadow">
+      <p class="text-sm text-gray-500">Total Stock Value</p>
+      <p class="text-lg font-bold">Rp 43.5M</p>
     </div>
   </div>
 
-  <div class="bg-white rounded-xl shadow p-6 mt-4">
-    <h2 class="text-lg font-semibold mb-2">Chart Reports</h2>
-    <div class="h-40 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 italic">
-      Grafik dummy
-    </div>
+  <div class="flex justify-between items-center mt-6">
+    <button class="bg-green-600 text-white px-4 py-2 rounded">+ Add New Stock</button>
+    <input type="text" placeholder="Search products..." class="border px-3 py-2 rounded w-1/4">
   </div>
 
-  <div class="bg-white rounded-xl shadow p-6 mt-4">
-    <h2 class="text-lg font-semibold mb-4">Produk Terbaru</h2>
-    <table class="w-full table-auto text-sm">
-      <thead class="text-left text-gray-500">
+  <div class="overflow-x-auto mt-4 bg-white rounded-xl shadow">
+    <table class="w-full text-sm text-left">
+      <thead class="bg-gray-100 text-gray-700">
         <tr>
-          <th class="py-2">Produk ID</th>
-          <th>Nama Produk</th>
-          <th>Kategori</th>
-          <th>Harga</th>
-          <th>Stok</th>
+          <th class="p-2">Product ID</th>
+          <th>Product Name</th>
+          <th>Category</th>
+          <th>Price (Rp)</th>
+          <th>Current Stock</th>
           <th>Status</th>
-          <th>Aksi</th>
+          <th>Actions</th>
         </tr>
       </thead>
-      <tbody class="text-gray-700">
-        <tr>
-          <td class="py-2">#123456</td>
-          <td>Nalasha Gamis Cantik</td>
+      <tbody>
+        <tr class="border-t">
+          <td class="p-2">NL-001</td>
+          <td>Anggun Pastel Dress</td>
           <td>Gamis</td>
-          <td>Rp 250.000</td>
-          <td>45</td>
-          <td><span class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs">Aktif</span></td>
-          <td><button class="text-sm text-blue-600 mr-2">Edit</button><button class="text-sm text-red-600">Hapus</button></td>
+          <td>365,000</td>
+          <td>25</td>
+          <td><span class="text-green-600">Good</span></td>
+          <td><button class="text-blue-500 mr-2">Edit</button><button class="text-green-500">Update Stock</button></td>
         </tr>
-        <!-- Tambahkan produk lainnya di sini -->
+        <!-- Tambah data lainnya sesuai kebutuhan -->
       </tbody>
     </table>
-  </div>
+  </div>    
     </section>
   </main>
-</div>
-
-<!-- Script SPA -->
 <script>
   links.forEach(link => {
     link.addEventListener("click", e => {
