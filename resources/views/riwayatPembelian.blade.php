@@ -10,7 +10,7 @@
 <body class="bg-white">
 
 <div class="flex h-screen">
-  <!-- Sidebar -->
+   <!-- Sidebar -->
   <aside class="w-64 bg-white shadow-md flex flex-col">
     <div class="p-6 border-b">
       <h1 class="text-xl font-bold text-gray-800">e-Nalasha</h1>
@@ -30,8 +30,17 @@
         <li><a href="{{ route('riwayatPembelian') }}" class="block py-2 px-4 rounded hover:bg-green-800 hover:text-white">Riwayat Pembelian</a></li>
       </ul>
     </nav>
+    <!-- Logout Button -->
+    <div class="p-4 border-t">
+        <form method="POST" action="">
+            @csrf
+            <button type="submit" class="w-full text-left px-4 py-2 rounded bg-red-100 text-red-600 hover:bg-red-600 hover:text-white transition">
+                Logout
+            </button>
+        </form>
+    </div>
   </aside>
-
+  
   <!-- Main Content -->
   <main class="flex-1 bg-[#f5f5f5] text-black p-10 overflow-y-auto">
     <!-- Riwayat Pembelian -->

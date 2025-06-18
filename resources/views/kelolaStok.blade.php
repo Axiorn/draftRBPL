@@ -30,6 +30,15 @@
         <li><a href="{{ route('riwayatPembelian') }}" class="block py-2 px-4 rounded hover:bg-green-800 hover:text-white">Riwayat Pembelian</a></li>
       </ul>
     </nav>
+    <!-- Logout Button -->
+    <div class="p-4 border-t">
+        <form method="POST" action="">
+            @csrf
+            <button type="submit" class="w-full text-left px-4 py-2 rounded bg-red-100 text-red-600 hover:bg-red-600 hover:text-white transition">
+                Logout
+            </button>
+        </form>
+    </div>
   </aside>
 
   <!-- Main Content -->
