@@ -28,6 +28,7 @@ class LandingController extends Controller {
     public function checkout()
     {
         return view('checkout');
+    }
     public function tambahProduk()
     {
         return view('tambahProduk');
