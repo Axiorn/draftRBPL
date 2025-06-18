@@ -21,3 +21,4 @@ Route::get('/admin', [LandingController::class, 'admin'])->name('admin');
 Route::get('/tambahProduk', [LandingController::class, 'tambahProduk'])->name('tambahProduk');
 Route::get('/kelolaStok', [LandingController::class, 'kelolaStok'])->name('kelolaStok');
 Route::get('/riwayatPembelian', [LandingController::class, 'riwayatPembelian'])->name('riwayatPembelian');
+Route::get('/owner',[LandingController::class, 'owner'])->name('owner');

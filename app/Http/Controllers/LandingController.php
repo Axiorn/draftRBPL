@@ -33,4 +33,8 @@ class LandingController extends Controller {
     {
         return view('riwayatPembelian');
     }
+    public function owner()
+    {
+        return view('owner');
+    }
 }
