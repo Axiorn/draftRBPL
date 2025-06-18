@@ -21,4 +21,12 @@ class LandingController extends Controller {
     {
         return view('admin');
     }
+    public function keranjang()
+    {
+        return view('keranjang');
+    }
+    public function checkout()
+    {
+        return view('checkout');
+    }
 }
