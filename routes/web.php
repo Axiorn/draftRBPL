@@ -17,3 +17,4 @@ use App\Http\Controllers\LandingController;
 Route::get('/', [LandingController::class, 'landing'])->name('landing');
 Route::get('/produk', [LandingController::class, 'produk'])->name('produk');
 Route::get('/status', [LandingController::class, 'status'])->name('status');
+Route::get('/admin', [LandingController::class, 'admin'])->name('admin');

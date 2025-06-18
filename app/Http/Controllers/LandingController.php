@@ -17,4 +17,8 @@ class LandingController extends Controller {
     {
         return view('status');
     }
+    public function admin()
+    {
+        return view('admin');
+    }
 }
