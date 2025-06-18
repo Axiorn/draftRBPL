@@ -32,194 +32,164 @@
 </nav>
 
 <!-- Content Area -->
-    <div class=" mx-auto">
-  <!-- Section Judul & Tombol -->
-  <div class="bg-[#E5FFF0] p-8 text-center">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-8">Product e-Nalasha</h2>
+  <div class="max-w-7xl mx-auto bg-gray-50 p-6 rounded-xl shadow-sm space-y-6 mt-12 mb-12">
 
-    <div class="flex justify-center items-center gap-6 flex-wrap">
-      <button class="option-btn px-6 py-3 bg-green-500 text-white font-medium rounded-md shadow-sm hover:bg-green-600 transition-colors duration-200 min-w-[120px]" data-target="muslimah">
-        Muslimah
-      </button>
-      <button class="option-btn px-6 py-3 bg-white text-gray-700 border border-gray-300 font-medium rounded-md shadow-sm hover:bg-green-600 transition-colors duration-200 min-w-[120px]" data-target="muslim">
-        Muslim
-      </button>
-      <button class="option-btn px-6 py-3 bg-white text-gray-700 border border-gray-300 font-medium rounded-md shadow-sm hover:bg-green-600 transition-colors duration-200 min-w-[120px]" data-target="sarimbit">
-        Sarimbit
-      </button>
-    </div>
-  </div>
+  <!-- Section 1 -->
+  <div class="flex flex-col md:flex-row gap-6">
+    <!-- Gambar -->
+    <img src="/assets/images/landing/Kaftan Tulip.png" alt="Yasmine Dress" class="w-28 h-36 object-cover rounded-md" />
+    
+    <!-- Detail Order -->
+    <div class="flex-1 space-y-1">
+      <p class="font-semibold text-blue-900">Order ID: <span class="font-bold text-blue-800">3354654654526</span></p>
+      <p class="text-gray-800 font-medium">Gamis Wanita Yasmine Dress</p>
+      <p class="text-gray-600">Varian: Maroon</p>
+      <p class="text-gray-600">Ukuran: XS</p>
+      <p class="text-gray-600">Kuantitas: 1</p>
 
-  <!-- Konten Muslimah -->
-  <div id="muslimah" class="content-page hidden bg-white px-24 py-16 text-center mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8">
-      <!-- CARD 1 -->
-      <div class="flex flex-col items-center">
-        <img src="assets/images/landing/image1.png" alt="Yasmine Dress" class="w-48 h-64 object-cover rounded-md shadow-sm" />
-        <h3 class="mt-3 font-medium text-gray-800">Yasmine Dress</h3>
-        <div class="flex items-center gap-2 text-sm mt-1">
-          <p class="font-semibold text-gray-900">Rp.395.000</p>
-          <span class="text-gray-300">|</span>
-          <div class="flex items-center gap-1">
-            <span class="text-yellow-500">★</span><span class="text-gray-600">5.0</span>
-          </div>
+      <!-- Tanggal & Estimasi -->
+      <div class="flex flex-wrap gap-6 mt-3 text-sm text-gray-700">
+        <div class="flex items-center gap-2">
+          <i class="fa-regular fa-calendar"></i>
+          <span>Tanggal Pemesanan: <span class="font-semibold text-black">10 Januari 2025</span></span>
         </div>
-      </div>
-      <!-- CARD 8 -->
-      <div class="flex flex-col items-center">
-        <img src="assets/images/landing/image8.png" alt="Fairuz – Brukat Premium" class="w-48 h-64 object-cover rounded-md shadow-sm" />
-        <h3 class="mt-3 font-medium text-gray-800">Fairuz – Brukat Premium</h3>
-        <div class="flex items-center gap-2 text-sm mt-1">
-          <p class="font-semibold text-gray-900">Rp.220.000</p>
-          <span class="text-gray-300">|</span>
-          <div class="flex items-center gap-1">
-            <span class="text-yellow-500">★</span><span class="text-gray-600">5.0</span>
-          </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-truck"></i>
+          <span>Estimasi Barang Sampai: <span class="font-semibold text-black">15–17 Januari 2025</span></span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Konten Muslim -->
-  <div id="muslim" class="content-page hidden bg-white px-24 py-16 text-center mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8">
-      <!-- CARD 1 -->
-      <div class="flex flex-col items-center">
-        <img src="assets/images/landing/muslim1.png" alt="Al-Luthfi" class="w-48 h-64 object-cover rounded-md shadow-sm" />
-        <h3 class="mt-3 font-medium text-gray-800">Al-Luthfi - Gamis Pria Saudi</h3>
-        <div class="flex items-center gap-2 text-sm mt-1">
-          <p class="font-semibold text-gray-900">Rp.150.000</p>
-          <span class="text-gray-300">|</span>
-          <div class="flex items-center gap-1">
-            <span class="text-yellow-500">★</span><span class="text-gray-600">5.0</span>
-          </div>
-        </div>
+  <!-- Section 2 -->
+  <div class="flex justify-end gap-3">
+    <button class="border border-gray-300 px-4 py-2 rounded-md text-sm hover:bg-gray-100 transition">🧾 Invoice</button>
+    <button id="openTrackingBtn" class="bg-green-500 text-white px-4 py-2 rounded-md text-sm hover:bg-green-600 transition">Pantau Pengiriman</button>
+  </div>
+</div>
+
+<!-- Backdrop-->
+<div id="trackingModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center hidden">
+  <div class="bg-white rounded-xl shadow-lg w-full max-w-2xl p-6 space-y-6 overflow-y-auto max-h-[90vh] relative">
+    
+    <button id="closeTrackingBtn" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
+
+    <!-- Section 1 -->
+    <!-- Section Header -->
+    <div class="space-y-4">
+      <!-- Breadcrumb -->
+      <div class="text-sm text-gray-500">
+        <span class="font-medium">Status Pesanan</span> &gt; <span class="text-gray-600">ID 3352655445</span>
       </div>
-      <!-- CARD 8 -->
-      <div class="flex flex-col items-center">
-        <img src="assets/images/landing/muslim2.png" alt="ALBIRRU" class="w-48 h-64 object-cover rounded-md shadow-sm" />
-        <h3 class="mt-3 font-medium text-gray-800">ALBIRRU Gamis Model Pria</h3>
-        <div class="flex items-center gap-2 text-sm mt-1">
-          <p class="font-semibold text-gray-900">Rp.120.000</p>
-          <span class="text-gray-300">|</span>
-          <div class="flex items-center gap-1">
-            <span class="text-yellow-500">★</span><span class="text-gray-600">4.9</span>
-          </div>
-        </div>
+
+      <!-- Order ID (centered) -->
+      <h2 class="text-2xl font-bold text-center text-gray-800">Order ID: 3354654654526</h2>
+
+      <!-- Order date + Estimated Delivery -->
+      <div class="flex justify-left items-center gap-4 text-sm text-gray-600">
+        <p>
+          Order date: <span class="font-semibold text-black">10 Jan 2025</span>
+        </p>
+        <div class="w-px h-4 bg-gray-300"></div>
+        <p class="flex items-center text-green-600 font-medium">
+          <!-- Icon pengiriman (Opsional) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V5a1 1 0 011-1h7a1 1 0 011 1v12h-2m-6 0H4v-3H2m6 3a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          Estimated delivery: <span class="text-black ml-1">15–17 Jan 2026</span>
+        </p>
       </div>
     </div>
-  </div>
 
-  <!-- Konten Sarimbit -->
-  <div id="sarimbit" class="content-page hidden bg-white px-24 py-16 text-center mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8">
-      <!-- CARD 1 -->
-      <div class="flex flex-col items-center">
-        <img src="assets/images/landing/family1.png" alt="KIRANA" class="w-48 h-64 object-cover rounded-md shadow-sm" />
-        <h3 class="mt-3 font-medium text-gray-800">KIRANA Family (Hershey)</h3>
-        <div class="flex items-center gap-2 text-sm mt-1">
-          <p class="font-semibold text-gray-900 text-left">Start <br>Rp.175.000</p>
-          <span class="text-gray-300">|</span>
-          <div class="flex items-center gap-1">
-            <span class="text-yellow-500">★</span><span class="text-gray-600">5.0</span>
-          </div>
+    <!-- Section 2 -->
+    <div class="space-y-6">
+      <!-- Status Stepper -->
+      <div class="flex justify-between items-center text-center text-sm text-gray-500">
+        <div class="flex flex-col items-center gap-1">
+          <p class="font-semibold text-green-600">Pesanan<br>Dikonfirmasi</p>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <p class="text-xs mt-1">10 Januari 2025</p>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <p>Dikirim</p>
+          <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+          <p class="text-xs mt-1">14 Januari 2025</p>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <p>Produk<br>Sampai</p>
+          <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+          <p class="text-xs mt-1">15–17 Januari 2025</p>
         </div>
       </div>
-      <!-- CARD 8 -->
-      <div class="flex flex-col items-center">
-        <img src="assets/images/landing/family2.png" alt="ZANNAYA" class="w-48 h-64 object-cover rounded-md shadow-sm" />
-        <h3 class="mt-3 font-medium text-gray-800">Katun SARIMBIT ZANNAYA</h3>
-        <div class="flex items-center gap-2 text-sm mt-1">
-          <p class="font-semibold text-gray-900 text-left">Start <br>Rp.229.000</p>
-          <span class="text-gray-300">|</span>
-          <div class="flex items-center gap-1">
-            <span class="text-yellow-500">★</span><span class="text-gray-600">4.9</span>
-          </div>
+
+      <!-- Produk Info -->
+      <div class="flex items-start gap-4 border rounded-lg p-4 bg-gray-50">
+        <img src="/assets/images/landing/Kaftan Tulip.png" alt="Produk" class="w-20 h-28 object-cover rounded-md" />
+        <div class="flex-1">
+          <p class="font-semibold text-gray-800">Gamis Wanita Yasmine Dress</p>
+          <p class="text-sm text-gray-600">Maroon | XS</p>
+          <p class="text-sm text-gray-500">Qty: 1</p>
         </div>
+        <p class="text-sm font-semibold text-gray-800">Rp. 395.000</p>
+      </div>
+    </div>
+    
+    <!-- Section 3 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Pembayaran -->
+      <div>
+        <p class="text-sm text-gray-500">Pembayaran</p>
+        <p class="font-medium text-gray-800">Transfer Bank (BRI)</p>
+      </div>
+      
+      <!-- Pengiriman -->
+      <div>
+        <p class="text-sm text-gray-500">Pengiriman</p>
+        <p class="text-gray-800">Jalan Lawu 3 No.6<br>Kec. Depok, Kabupaten Sleman,<br>Daerah Istimewa Yogyakarta</p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="pt-4 border-t space-y-2">
+      <p class="font-semibold text-gray-800">Order Summary</p>
+      <div class="flex justify-between text-sm text-gray-700">
+        <span>Harga Unit</span><span>Rp. 395.000</span>
+      </div>
+      <div class="flex justify-between text-sm text-gray-700">
+        <span>Ongkir</span><span>Rp. 0</span>
+      </div>
+      <div class="flex justify-between text-sm text-gray-700">
+        <span>Biaya Admin</span><span>Rp. 5.000</span>
+      </div>
+      <hr class="my-2">
+      <div class="flex justify-between text-base font-semibold text-gray-900">
+        <span>Total</span><span>Rp. 400.000</span>
       </div>
     </div>
   </div>
 </div>
 
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('.option-btn');
-    const pages = document.querySelectorAll('.content-page');
+  const openBtn = document.getElementById('openTrackingBtn');
+  const closeBtn = document.getElementById('closeTrackingBtn');
+  const modal = document.getElementById('trackingModal');
 
-    function resetAll() {
-      buttons.forEach(btn => {
-        btn.classList.remove('bg-green-500', 'text-white');
-        btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-      });
+  openBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
 
-      pages.forEach(page => {
-        page.classList.add('hidden');
-      });
-    }
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
 
-    function activateButton(button) {
-      const target = button.getAttribute('data-target');
-      button.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-      button.classList.add('bg-green-500', 'text-white');
-
-      document.getElementById(target).classList.remove('hidden');
-    }
-
-    buttons.forEach(button => {
-      button.addEventListener('click', function () {
-        resetAll();
-        activateButton(this);
-      });
-    });
-
-    const defaultBtn = document.querySelector('.option-btn[data-target="muslimah"]');
-    if (defaultBtn) {
-      activateButton(defaultBtn);
+  // Optional: Tutup popup jika klik luar konten modal
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
     }
   });
 </script>
-
-<!-- Footer -->
-<footer class="bg-green-900 text-white px-24 py-12">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
-        <div class="space-y-8">
-            <div class="text-2xl font-bold">e-Nalasha</div>
-            <div>
-                <h4 class="font-medium text-base mb-4">Social Media</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-8 h-8 border border-white rounded flex items-center justify-center hover:bg-white hover:text-green-900 transition-colors">
-                        <i class="fab fa-facebook-f text-sm"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 border border-white rounded flex items-center justify-center hover:bg-white hover:text-green-900 transition-colors">
-                        <i class="fab fa-twitter text-sm"></i>
-                    </a>
-                    <a href="#" class="w-8 h-8 border border-white rounded flex items-center justify-center hover:bg-white hover:text-green-900 transition-colors">
-                        <i class="fab fa-instagram text-sm"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="flex items-start space-x-3">
-                <i class="fas fa-map-marker-alt text-base mt-1 flex-shrink-0"></i>
-                <span class="text-sm leading-relaxed">Jl. Dimana-Mana No.2, Keruncung</span>
-            </div>
-            <div class="flex items-center space-x-3">
-                <i class="fas fa-phone text-base"></i>
-                <span class="text-sm">0812-XXXX-XXX</span>
-            </div>
-        </div>
-        <div class="mt-10 md:mt-0 md:ml-20">
-            <h4 class="font-bold text-xl mb-6">MENU</h4>
-            <ul class="space-y-4">
-                <li><a href="#" class="text-sm hover:underline">Home</a></li>
-                <li><a href="#" class="text-sm hover:underline">Product</a></li>
-                <li><a href="#" class="text-sm hover:underline">Shopping Cart</a></li>
-                <li><a href="#" class="text-sm hover:underline">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="border-t border-green-700 mt-12 max-w-6xl mx-auto"></div>
-</footer>
 
 </body>
 </html>

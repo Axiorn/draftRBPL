@@ -18,6 +18,8 @@ Route::get('/', [LandingController::class, 'landing'])->name('landing');
 Route::get('/produk', [LandingController::class, 'produk'])->name('produk');
 Route::get('/status', [LandingController::class, 'status'])->name('status');
 Route::get('/admin', [LandingController::class, 'admin'])->name('admin');
+Route::get('/keranjang', [LandingController::class, 'keranjang'])->name('keranjang');
+Route::get('/checkout', [LandingController::class, 'checkout'])->name('checkout');
 Route::get('/tambahProduk', [LandingController::class, 'tambahProduk'])->name('tambahProduk');
 Route::get('/kelolaStok', [LandingController::class, 'kelolaStok'])->name('kelolaStok');
 Route::get('/riwayatPembelian', [LandingController::class, 'riwayatPembelian'])->name('riwayatPembelian');
