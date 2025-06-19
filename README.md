@@ -1,68 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Hi, this is a web for e-Nalasha! 👋
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# e-Nalasha
+a
+e-Nalasha adalah sebuah platform web inovatif yang didedikasikan untuk busana muslimah. Proyek ini bertujuan untuk menyediakan pengalaman belanja online yang mulus dan menyenangkan bagi para wanita Muslim yang mencari pakaian modis dan sesuai syariat.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+- Categorization on Product
+- Shipping Status
+- Dashboard on Admin
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Demo
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Insert gif or link to demo
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Acknowledgements
 
-### Premium Partners
+ - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+ - [Freepik - Free Graphic Resources](https://www.freepik.com)
+ - [Figma - UI/UX Design Tool](https://www.figma.com)
+ - [Tutorial YouTube - Web Development](https://www.youtube.com)
+ - Dosen dan Asisten Praktikum Universitas UPN "Veteran" Yogyakarta
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+## Badges
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)  ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)  ![npm](https://img.shields.io/badge/npm-11.4.1-red)  ![PHP](https://img.shields.io/badge/PHP-8.1.10-777bb4)  ![Laravel](https://img.shields.io/badge/Laravel-10.x-f9322c)
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## 🚀 About Me
+Proyek ini dikembangkan oleh [Latief Ghilfawan](https://github.com/Axiorn/) dan [Ahmad Nuruddin](https://github.com/RudiAdmah-31/) sebagai Web Developer pada website busana muslimah e-Nalasha
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## FAQ
 
-## License
+#### 1. Apakah saya harus membuat akun untuk berbelanja?
+Tidak harus. Kamu bisa langsung checkout sebagai tamu (guest), tapi kami sarankan membuat akun agar bisa melacak pesanan, menyimpan riwayat belanja, dan mendapatkan promo khusus.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# draftRBPL" 
-"# draftRBPL" 
+#### 2. Apakah website ini aman untuk transaksi?
+Ya, website kami menggunakan enkripsi SSL dan sistem pembayaran yang terpercaya untuk memastikan keamanan data dan transaksi kamu.
+
+#### 3. Apakah bisa belanja lewat HP?
+Bisa. Website kami sudah responsif dan bisa diakses dengan lancar melalui smartphone, tablet, maupun komputer.
+
