@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>e-Nalasha</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-</head>
+@extends('layout.index', [
+    'title' => 'e-Nalasha',
+    // 'active' => 'Home',
+    'page' => 'checkout',
+])
 
+@section('content')
 <div class="flex flex-col lg:flex-row gap-4 px-16 py-6">
   <!-- Section 1: Ringkasan Order -->
   <section class="w-full lg:w-1/3 space-y-6 p-4 bg-white">
@@ -181,77 +178,74 @@
 </div>
 
 <!-- BACKDROP INVOICE -->
-<div id="invoiceModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center hidden">
-  <div class="bg-white rounded-xl shadow-lg w-full max-w-xl p-6 space-y-6 relative text-center">
-    <button id="closeInvoiceBtn" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
-    <h2 class="text-3xl font-semibold text-black">INVOICE</h2>
-    <div class="flex items-center justify-center gap-2 text-lg text-black">
-      <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M4 3h12a2 2 0 012 2v2H2V5a2 2 0 012-2zM2 9h16v3a2 2 0 01-2 2H4a2 2 0 01-2-2V9zm4 2a1 1 0 100-2 1 1 0 000 2z"/>
-      </svg>
-      <span class="text-base">Cash On Delivery (COD)</span>
-    </div>
-    <p class="text-xl font-semibold text-black">Total Pembayaran : Rp. 400.000</p>
-    <p class="text-sm text-gray-800 font-medium">NB : Diharap membayar secara pas ketika barang telah sampai</p>
-    <div class="flex justify-center gap-4 pt-2">
-      <a href="{{ route('status') }}">
-        <button class="border border-black px-6 py-2 rounded hover:bg-gray-100 font-semibold">Status Pesanan</button>
-      </a>
-      <a href="{{ route('landing') }}">
-        <button class="border border-black px-6 py-2 rounded hover:bg-gray-100 font-semibold">Menu Awal</button>
-      </a>
+  <div id="invoiceModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center hidden">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-xl p-6 space-y-6 relative text-center">
+      <button id="closeInvoiceBtn" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
+      <h2 class="text-3xl font-semibold text-black">INVOICE</h2>
+      <div class="flex items-center justify-center gap-2 text-lg text-black">
+        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 3h12a2 2 0 012 2v2H2V5a2 2 0 012-2zM2 9h16v3a2 2 0 01-2 2H4a2 2 0 01-2-2V9zm4 2a1 1 0 100-2 1 1 0 000 2z"/>
+        </svg>
+        <span class="text-base">Cash On Delivery (COD)</span>
+      </div>
+      <p class="text-xl font-semibold text-black">Total Pembayaran : Rp. 400.000</p>
+      <p class="text-sm text-gray-800 font-medium">NB : Diharap membayar secara pas ketika barang telah sampai</p>
+      <div class="flex justify-center gap-4 pt-2">
+        <a href="{{ route('status') }}">
+          <button class="border border-black px-6 py-2 rounded hover:bg-gray-100 font-semibold">Status Pesanan</button>
+        </a>
+        <a href="{{ route('landing') }}">
+          <button class="border border-black px-6 py-2 rounded hover:bg-gray-100 font-semibold">Menu Awal</button>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  const openInvoiceBtn = document.getElementById('openInvoiceBtn');
-  const closeInvoiceBtn = document.getElementById('closeInvoiceBtn');
-  const invoiceModal = document.getElementById('invoiceModal');
+  {{-- JS next form checkout --}}
+  <script>
+    const openInvoiceBtn = document.getElementById('openInvoiceBtn');
+    const closeInvoiceBtn = document.getElementById('closeInvoiceBtn');
+    const invoiceModal = document.getElementById('invoiceModal');
 
-  openInvoiceBtn.addEventListener('click', () => {
-    invoiceModal.classList.remove('hidden');
-  });
-
-  closeInvoiceBtn.addEventListener('click', () => {
-    invoiceModal.classList.add('hidden');
-  });
-
-  invoiceModal.addEventListener('click', (e) => {
-    if (e.target === invoiceModal) {
-      invoiceModal.classList.add('hidden');
-    }
-  });
-</script>
-
-<script>
-  function showStep(stepId) {
-    const steps = ['shipping', 'delivery', 'payment'];
-    const indicatorMap = {
-      shipping: 'step-shipping',
-      delivery: 'step-delivery',
-      payment: 'step-payment'
-    };
-
-    steps.forEach(id => {
-      // Sembunyikan konten
-      document.getElementById(id).classList.add('hidden');
-
-      // Reset indikator
-      const indicator = document.getElementById(indicatorMap[id]);
-      indicator.classList.remove('text-green-500', 'font-bold');
-      indicator.classList.add('text-gray-400', 'font-normal');
+    openInvoiceBtn.addEventListener('click', () => {
+      invoiceModal.classList.remove('hidden');
     });
 
-    // Tampilkan konten aktif
-    document.getElementById(stepId).classList.remove('hidden');
+    closeInvoiceBtn.addEventListener('click', () => {
+      invoiceModal.classList.add('hidden');
+    });
 
-    // Aktifkan indikator
-    const activeIndicator = document.getElementById(indicatorMap[stepId]);
-    activeIndicator.classList.remove('text-gray-400', 'font-normal');
-    activeIndicator.classList.add('text-green-500', 'font-bold');
-  }
-</script>
+    invoiceModal.addEventListener('click', (e) => {
+      if (e.target === invoiceModal) {
+        invoiceModal.classList.add('hidden');
+      }
+    });
+  </script>
 
-</body>
-</html>
+  {{-- JS Keterangan Tulisan Shipping --}}
+  <script>
+    function showStep(stepId) {
+      const steps = ['shipping', 'delivery', 'payment'];
+      const indicatorMap = {
+        shipping: 'step-shipping',
+        delivery: 'step-delivery',
+        payment: 'step-payment'
+      };
+
+      steps.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+
+        const indicator = document.getElementById(indicatorMap[id]);
+        indicator.classList.remove('text-green-500', 'font-bold');
+        indicator.classList.add('text-gray-400', 'font-normal');
+      });
+
+      document.getElementById(stepId).classList.remove('hidden');
+
+      const activeIndicator = document.getElementById(indicatorMap[stepId]);
+      activeIndicator.classList.remove('text-gray-400', 'font-normal');
+      activeIndicator.classList.add('text-green-500', 'font-bold');
+    }
+  </script>
+
+@endsection
