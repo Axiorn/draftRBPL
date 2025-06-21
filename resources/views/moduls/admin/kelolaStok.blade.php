@@ -11,35 +11,59 @@
 
 <div class="flex h-screen">
   <!-- Sidebar -->
-  <aside class="w-64 bg-white shadow-md flex flex-col">
-    <div class="p-6 border-b">
-      <h1 class="text-xl font-bold text-gray-800">e-Nalasha</h1>
+<aside class="w-64 bg-white shadow-md flex flex-col">
+  <div class="p-6 border-b">
+    <h1 class="text-xl font-bold text-gray-800">e-Nalasha</h1>
+  </div>
+  <div class="p-4 border-b flex items-center space-x-4">
+    <div class="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center text-lg font-bold">R</div>
+    <div>
+      <p class="font-semibold text-gray-800">Rudi Ahmad</p>
+      <p class="text-sm text-gray-500">Admin E-Nalasha</p>
     </div>
-    <div class="p-4 border-b flex items-center space-x-4">
-      <div class="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center text-lg font-bold">R</div>
-      <div>
-        <p class="font-semibold text-gray-800">Rudi Ahmad</p>
-        <p class="text-sm text-gray-500">Admin E-Nalasha</p>
-      </div>
-    </div>
-    <nav class="flex-1 p-4">
-      <ul class="space-y-4 text-gray-700">
-        <li><a href="{{ route('admin') }}" class="block py-2 px-4 rounded hover:bg-green-800 hover:text-white">Dashboard</a></li>
-        <li><a href="{{ route('tambahProduk') }}" class="block py-2 px-4 rounded hover:bg-green-800 hover:text-white">Penambahan Produk</a></li>
-        <li><a href="{{ route('kelolaStok') }}" class="block py-2 px-4 rounded hover:bg-green-800 hover:text-white">Kelola Stok</a></li>
-        <li><a href="{{ route('riwayatPembelian') }}" class="block py-2 px-4 rounded hover:bg-green-800 hover:text-white">Riwayat Pembelian</a></li>
-      </ul>
-    </nav>
-    <!-- Logout Button -->
-    <div class="p-4 border-t">
-        <form method="POST" action="">
-            @csrf
-            <button type="submit" class="w-full text-left px-4 py-2 rounded bg-red-100 text-red-600 hover:bg-red-600 hover:text-white transition">
-                Logout
-            </button>
-        </form>
-    </div>
-  </aside>
+  </div>
+
+  <nav class="flex-1 p-4">
+    <ul class="space-y-4 text-gray-700">
+      <li>
+        <a href="{{ route('admin') }}"
+           class="block py-2 px-4 rounded {{ request()->routeIs('admin') ? 'bg-green-800 text-white' : 'hover:bg-green-800 hover:text-white' }}">
+           Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('tambahProduk') }}"
+           class="block py-2 px-4 rounded {{ request()->routeIs('tambahProduk') ? 'bg-green-800 text-white' : 'hover:bg-green-800 hover:text-white' }}">
+           Penambahan Produk
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('kelolaStok') }}"
+           class="block py-2 px-4 rounded {{ request()->routeIs('kelolaStok') ? 'bg-green-800 text-white' : 'hover:bg-green-800 hover:text-white' }}">
+           Kelola Stok
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('riwayatPembelian') }}"
+           class="block py-2 px-4 rounded {{ request()->routeIs('riwayatPembelian') ? 'bg-green-800 text-white' : 'hover:bg-green-800 hover:text-white' }}">
+           Riwayat Pembelian
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Logout -->
+  <div class="p-4 border-t">
+    <form method="POST" action="">
+      @csrf
+      <button type="submit"
+              class="w-full text-left px-4 py-2 rounded bg-red-100 text-red-600 hover:bg-red-600 hover:text-white transition">
+        Logout
+      </button>
+    </form>
+  </div>
+</aside>
+
 
   <!-- Main Content -->
   <main class="flex-1 bg-[#f5f5f5] text-black p-10 overflow-y-auto">
