@@ -174,11 +174,55 @@
       <!-- Tombol Navigasi -->
       <div class="flex justify-between mt-6">
         <button onclick="showStep('delivery')" class="px-6 py-2 border border-green-500 text-green-600 rounded hover:bg-green-50">Kembali</button>
-        <button class="px-6 py-2 bg-green-400 hover:bg-green-500 text-white font-medium rounded">Bayar Sekarang</button>
+        <button id="openInvoiceBtn" class="px-6 py-2 bg-green-400 hover:bg-green-500 text-white font-medium rounded">Bayar Sekarang</button>
       </div>
     </div>
   </section>
 </div>
+
+<!-- BACKDROP INVOICE -->
+<div id="invoiceModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center hidden">
+  <div class="bg-white rounded-xl shadow-lg w-full max-w-xl p-6 space-y-6 relative text-center">
+    <button id="closeInvoiceBtn" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
+    <h2 class="text-3xl font-semibold text-black">INVOICE</h2>
+    <div class="flex items-center justify-center gap-2 text-lg text-black">
+      <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M4 3h12a2 2 0 012 2v2H2V5a2 2 0 012-2zM2 9h16v3a2 2 0 01-2 2H4a2 2 0 01-2-2V9zm4 2a1 1 0 100-2 1 1 0 000 2z"/>
+      </svg>
+      <span class="text-base">Cash On Delivery (COD)</span>
+    </div>
+    <p class="text-xl font-semibold text-black">Total Pembayaran : Rp. 400.000</p>
+    <p class="text-sm text-gray-800 font-medium">NB : Diharap membayar secara pas ketika barang telah sampai</p>
+    <div class="flex justify-center gap-4 pt-2">
+      <a href="{{ route('status') }}">
+        <button class="border border-black px-6 py-2 rounded hover:bg-gray-100 font-semibold">Status Pesanan</button>
+      </a>
+      <a href="{{ route('landing') }}">
+        <button class="border border-black px-6 py-2 rounded hover:bg-gray-100 font-semibold">Menu Awal</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const openInvoiceBtn = document.getElementById('openInvoiceBtn');
+  const closeInvoiceBtn = document.getElementById('closeInvoiceBtn');
+  const invoiceModal = document.getElementById('invoiceModal');
+
+  openInvoiceBtn.addEventListener('click', () => {
+    invoiceModal.classList.remove('hidden');
+  });
+
+  closeInvoiceBtn.addEventListener('click', () => {
+    invoiceModal.classList.add('hidden');
+  });
+
+  invoiceModal.addEventListener('click', (e) => {
+    if (e.target === invoiceModal) {
+      invoiceModal.classList.add('hidden');
+    }
+  });
+</script>
 
 <script>
   function showStep(stepId) {
