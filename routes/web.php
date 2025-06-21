@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,8 @@ Route::get('/checkout', [LandingController::class, 'checkout'])->name('checkout'
 Route::get('/owner',[LandingController::class, 'owner'])->name('owner');
 
 Route::prefix('/admin')->group(function () {
-    Route::get('/', [LandingController::class, 'admin'])->name('admin');
-    Route::get('/tambahProduk', [LandingController::class, 'tambahProduk'])->name('tambahProduk');
-    Route::get('/kelolaStok', [LandingController::class, 'kelolaStok'])->name('kelolaStok');
-    Route::get('/riwayatPembelian', [LandingController::class, 'riwayatPembelian'])->name('riwayatPembelian');
+    Route::get('/', [AdminController::class, 'admin'])->name('admin');
+    Route::get('/tambahProduk', [AdminController::class, 'tambahProduk'])->name('tambahProduk');
+    Route::get('/kelolaStok', [AdminController::class, 'kelolaStok'])->name('kelolaStok');
+    Route::get('/riwayatPembelian', [AdminController::class, 'riwayatPembelian'])->name('riwayatPembelian');
 });

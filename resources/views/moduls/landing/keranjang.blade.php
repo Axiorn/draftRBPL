@@ -1,36 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>e-Nalasha</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-</head>
+@extends('layout.index', [
+    'title' => 'e-Nalasha',
+    // 'active' => 'Home',
+    'page' => 'keranjang',
+])
 
-<!-- Navbar -->
-<nav class="bg-green-100 h-[64px] flex items-center justify-between px-24 sticky top-0 z-50">
-    <div class="text-xl font-bold text-green-900">
-      <span class="font-normal">e-</span><span class="font-bold">Nalasha</span>
-    </div>
-    <div class="flex items-center space-x-8">
-      <a href="{{ route('landing') }}" class="text-green-900 font-medium">HOME</a>
-      <a href="{{ route('produk') }}" class="text-green-900 font-medium">PRODUCT</a>
-      <a href="{{ route('status') }}" class="text-green-900 font-medium">STATUS</a>
-    </div>
-    <div class="flex items-center space-x-6">
-      <div class="relative">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h11L17 13M7 13l-4-8m14 0a2 2 0 110 4 2 2 0 010-4z" />
-        </svg>
-        <span class="absolute top-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-green-100"></span>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9.004 9.004 0 0112 15c2.485 0 4.735.998 6.364 2.636M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    </div>
-</nav>
-
+@section('content')
 <!-- Section 1: Judul -->
 <section class="bg-green-100 py-6 text-center">
   <h1 class="text-3xl font-bold text-green-900">Keranjang Belanja</h1>
@@ -76,7 +50,7 @@
     </a>
 </section>
 
-<!-- Backdrop -->
+<!-- Backdrop + JS -->
   <div id="productModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center hidden">
     <div class="bg-white rounded-xl shadow-lg w-full max-w-5xl p-6 relative overflow-y-auto max-h-[90vh]">
       <button id="closeProductBtn" class="absolute top-4 right-4 text-black text-2xl font-bold">&times;</button>
@@ -193,6 +167,4 @@
     setupSelectableButtons('ukuranGroup', 'bg-green-500 text-white font-semibold');
     setupSelectableButtons('tipeGroup', 'bg-green-500 text-white font-semibold');
   </script>
-
-</body>
-</html>
+@endsection

@@ -7,42 +7,22 @@ use Illuminate\Http\Request;
 class LandingController extends Controller {
     public function landing()
     {
-        return view('landing');
+        return view('moduls.landing.landing');
     }
     public function produk()
     {
-        return view('produk');
+        return view('moduls.landing.produk');
     }
     public function status()
     {
-        return view('status');
-    }
-    public function admin()
-    {
-        return view('admin');
+        return view('moduls.landing.status');
     }
     public function keranjang()
     {
-        return view('keranjang');
+        return view('moduls.landing.keranjang');
     }
     public function checkout()
     {
-        return view('checkout');
-    }
-    public function tambahProduk()
-    {
-        return view('tambahProduk');
-    }
-    public function kelolaStok()
-    {
-        return view('kelolaStok');
-    }
-    public function riwayatPembelian()
-    {
-        return view('riwayatPembelian');
-    }
-    public function owner()
-    {
-        return view('owner');
+        return view('moduls.landing.checkout');
     }
 }
