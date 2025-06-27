@@ -27,7 +27,7 @@
   <div id="muslimah" class="content-page hidden bg-white px-24 py-16 text-center mx-auto">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8">
       <div class="flex flex-col items-center">
-        <img src="assets/images/landing/Kaftan Tulip.png" alt="Yasmine Dress" class="w-48 h-64 object-cover rounded-md shadow-sm" />
+        <img src="assets/images/landing/image1.png" alt="Yasmine Dress" class="w-48 h-64 object-cover rounded-md shadow-sm" />
         <h3 class="mt-3 font-medium text-gray-800">Yasmine Dress</h3>
         <div class="flex items-center gap-2 text-sm mt-1">
           <p class="font-semibold text-gray-900">Rp.395.000</p>
@@ -110,7 +110,80 @@
     </div>
   </div>
 
+<!-- Backdrop + JS -->
+  <div id="productModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center hidden">
+    <div class="bg-white rounded-xl shadow-lg w-full max-w-5xl p-6 relative overflow-y-auto max-h-[90vh]">
+      <button id="closeProductBtn" class="absolute top-4 right-4 text-black text-2xl font-bold">&times;</button>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <div class="flex gap-2 mt-4 justify-center">
+            <img src="assets/images/landing/image1.png" alt="Produk" class="w-80 rounded-md object-cover"/>
+          </div>
+          <div class="flex gap-8 mt-4 justify-center">
+            <img src="assets/images/landing/image1.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
+            <img src="assets/images/landing/image1.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
+            <img src="assets/images/landing/image1.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h2 class="text-2xl font-semibold">Gamis Wanita Yasmine Dress</h2>
+          <p class="bg-gray-200 inline-block px-4 py-2 font-bold text-lg rounded">
+            Rp. 395.000
+          </p>
+          <p class="text-sm flex items-center gap-1">
+            <span>5.0</span>
+            <span class="text-yellow-500">★</span>
+            <span class="text-gray-500">12 Terjual</span>
+          </p>
+          <div>
+            <p class="font-semibold">Ukuran</p>
+            <div id="ukuranGroup" class="flex gap-2 mt-1">
+              <button class="border px-3 py-1 rounded hover:bg-green-100">XS</button>
+              <button class="border px-3 py-1 rounded hover:bg-green-100">S</button>
+              <button class="border px-3 py-1 rounded hover:bg-green-100">M</button>
+              <button class="border px-3 py-1 rounded hover:bg-green-100">L</button>
+              <button class="border px-3 py-1 rounded hover:bg-green-100">XL</button>
+            </div>
+          </div>
+          <div class="mt-4">
+            <p class="font-semibold">Tipe</p>
+            <div id="tipeGroup" class="flex gap-2 mt-1">
+              <button class="border px-3 py-1 rounded hover:bg-green-100">Maroon</button>
+              <button class="border px-3 py-1 rounded hover:bg-green-100">Navy</button>
+              <button class="border px-3 py-1 rounded hover:bg-green-100">Hitam</button>
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold">Kuantitas</p>
+            <div class="flex items-center gap-2 mt-1">
+              <button class="border px-2 rounded">−</button>
+              <span>1</span>
+              <button class="border px-2 rounded">+</button>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 mt-4">
+            <button class="border border-black px-4 py-2 rounded hover:bg-gray-100">
+              Masukkan Keranjang
+            </button>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+              Beli Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Deskripsi</h3>
+        <div class="border p-4 rounded text-sm leading-relaxed">
+          <p>SIZE XS LD 90 PJ 135</p>
+          <p>SIZE S LD 95 PJ 135</p>
+          <p>SIZE M LD 100 PJ 140</p>
+          <p>SIZE L LD 105 PJ 140</p>
+          <p>SIZE XL LD 110 PJ 140</p>
+        </div>
+      </div>
 
+    </div>
+  </div>
 
 {{-- JS untuk kategori muslim, muslimah, dan sarimbit --}}
   <script>
@@ -151,4 +224,24 @@
     });
   </script>
 
+{{-- JS untuk pop up detail produk --}}
+  <script>
+    const openProductBtn = document.getElementById('openProductBtn');
+    const closeProductBtn = document.getElementById('closeProductBtn');
+    const productModal = document.getElementById('productModal');
+
+    openProductBtn.addEventListener('click', () => {
+      productModal.classList.remove('hidden');
+    });
+
+    closeProductBtn.addEventListener('click', () => {
+      productModal.classList.add('hidden');
+    });
+
+    productModal.addEventListener('click', (e) => {
+      if (e.target === productModal) {
+        productModal.classList.add('hidden');
+      }
+    });
+  </script>
 @endsection
