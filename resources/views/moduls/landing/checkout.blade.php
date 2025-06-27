@@ -22,9 +22,9 @@
     <div class="space-y-4">
       <h2 class="font-semibold text-lg mt-16">Order Summary</h2>
       <div class="flex items-start gap-4">
-        <img src="/assets/images/landing/Kaftan Tulip.png" alt="Product" class="w-20 h-auto object-cover border rounded-md">
+        <img src="assets/images/landing/image1.png" alt="Product" class="w-20 h-auto object-cover border rounded-md">
         <div class="flex-1">
-          <p class="font-medium">Gamis Wanita Yasmine Dress</p>
+          <p class="font-medium">Yasmine Dress</p>
           <p class="text-sm text-gray-600">Varian: Maroon</p>
           <p class="text-sm text-gray-600">Ukuran: XS</p>
           <div class="flex items-center gap-2 mt-2">

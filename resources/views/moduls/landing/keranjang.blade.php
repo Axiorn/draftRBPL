@@ -24,10 +24,10 @@
             </div>
         </div>
         <div>
-            <img src="/assets/images/landing/Kaftan Tulip.png" alt="Produk" class="w-44 h-auto rounded-md">
+            <img src="assets/images/landing/image1.png" alt="Produk" class="w-44 h-auto rounded-md">
         </div>
         <div class="flex-1">
-            <h2 class="text-lg font-semibold">Gamis Wanita Yasmine Dress</h2>
+            <h2 class="text-lg font-semibold">Yasmine Dress</h2>
             <p><span class="font-medium">Varian:</span> Maroon</p>
             <p><span class="font-medium">Ukuran:</span> XS</p>
             <p><span class="font-medium">Kuantitas:</span> 1</p>
@@ -57,12 +57,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <div class="flex gap-2 mt-4 justify-center">
-            <img src="/assets/images/landing/Kaftan Tulip.png" alt="Produk" class="w-80 rounded-md object-cover"/>
+            <img src="assets/images/landing/image1.png" alt="Produk" class="w-80 rounded-md object-cover"/>
           </div>
           <div class="flex gap-8 mt-4 justify-center">
-            <img src="/assets/images/landing/Kaftan Tulip.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
-            <img src="/assets/images/landing/Kaftan Tulip.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
-            <img src="/assets/images/landing/Kaftan Tulip.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
+            <img src="assets/images/landing/image1.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
+            <img src="assets/images/landing/image1.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
+            <img src="assets/images/landing/image1.png" class="w-20 h-28 object-cover rounded-md cursor-pointer"/>
           </div>
         </div>
         <div class="space-y-4">

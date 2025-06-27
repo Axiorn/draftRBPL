@@ -9,12 +9,12 @@
   <!-- Section 1 -->
   <div class="flex flex-col md:flex-row gap-6">
     <!-- Gambar -->
-    <img src="/assets/images/landing/Kaftan Tulip.png" alt="Yasmine Dress" class="w-28 h-36 object-cover rounded-md" />
+    <img src="assets/images/landing/image1.png" alt="Yasmine Dress" class="w-28 h-36 object-cover rounded-md" />
     
     <!-- Detail Order -->
     <div class="flex-1 space-y-1">
       <p class="font-semibold text-blue-900">Order ID: <span class="font-bold text-blue-800">3354654654526</span></p>
-      <p class="text-gray-800 font-medium">Gamis Wanita Yasmine Dress</p>
+      <p class="text-gray-800 font-medium">Yasmine Dress</p>
       <p class="text-gray-600">Varian: Maroon</p>
       <p class="text-gray-600">Ukuran: XS</p>
       <p class="text-gray-600">Kuantitas: 1</p>
@@ -95,9 +95,9 @@
 
         <!-- Produk Info -->
         <div class="flex items-start gap-4 border rounded-lg p-4 bg-gray-50">
-          <img src="/assets/images/landing/Kaftan Tulip.png" alt="Produk" class="w-20 h-28 object-cover rounded-md" />
+          <img src="assets/images/landing/image1.png" alt="Produk" class="w-20 h-28 object-cover rounded-md" />
           <div class="flex-1">
-            <p class="font-semibold text-gray-800">Gamis Wanita Yasmine Dress</p>
+            <p class="font-semibold text-gray-800">Yasmine Dress</p>
             <p class="text-sm text-gray-600">Maroon | XS</p>
             <p class="text-sm text-gray-500">Qty: 1</p>
           </div>
