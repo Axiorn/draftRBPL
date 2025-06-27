@@ -97,7 +97,7 @@
   <div class="bg-white rounded-xl shadow p-6 mt-4">
     <h2 class="text-lg font-semibold mb-2">Chart Reports</h2>
     <div class="h-40 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 italic">
-      Grafik dummy
+      <img src="{{ asset('assets/images/landing/graph.jpg') }}" alt="Grafik" style="width :380px;">
     </div>
   </div>
 

@@ -37,6 +37,7 @@
           </div>
         </div>
       </div>
+      
       <div class="flex flex-col items-center">
         <img src="assets/images/landing/image8.png" alt="Fairuz – Brukat Premium" class="w-48 h-64 object-cover rounded-md shadow-sm" />
         <h3 class="mt-3 font-medium text-gray-800">Fairuz – Brukat Premium</h3>
@@ -108,6 +109,8 @@
       </div>
     </div>
   </div>
+
+
 
 {{-- JS untuk kategori muslim, muslimah, dan sarimbit --}}
   <script>

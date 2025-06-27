@@ -20,7 +20,8 @@ Route::get('/produk', [LandingController::class, 'produk'])->name('produk');
 Route::get('/status', [LandingController::class, 'status'])->name('status');
 Route::get('/keranjang', [LandingController::class, 'keranjang'])->name('keranjang');
 Route::get('/checkout', [LandingController::class, 'checkout'])->name('checkout');
-
+Route::get('/login', [LandingController::class, 'login'])->name('login');
+Route::get('/signup', [LandingController::class, 'signup'])->name('signup');
 Route::get('/owner',[LandingController::class, 'owner'])->name('owner');
 
 Route::prefix('/admin')->group(function () {

@@ -25,4 +25,12 @@ class LandingController extends Controller {
     {
         return view('moduls.landing.checkout');
     }
+     public function login()
+    {
+        return view('moduls.landing.login');
+    }
+    public function signup()
+    {
+        return view('moduls.landing.signup');
+    }
 }
