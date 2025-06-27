@@ -21,8 +21,5 @@ class AdminController extends Controller {
     {
         return view('moduls.admin.riwayatPembelian');
     }
-    public function owner()
-    {
-        return view('moduls.admin.owner');
-    }
+    
 }

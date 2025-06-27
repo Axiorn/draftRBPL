@@ -22,6 +22,7 @@ Route::get('/keranjang', [LandingController::class, 'keranjang'])->name('keranja
 Route::get('/checkout', [LandingController::class, 'checkout'])->name('checkout');
 Route::get('/login', [LandingController::class, 'login'])->name('login');
 Route::get('/signup', [LandingController::class, 'signup'])->name('signup');
+
 Route::get('/owner',[LandingController::class, 'owner'])->name('owner');
 
 Route::prefix('/admin')->group(function () {

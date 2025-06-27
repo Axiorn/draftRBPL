@@ -18,7 +18,7 @@
 
     <h1 class="text-3xl font-bold mb-6">Daftar Sekarang !</h1>
 
-    <form method="POST" action="{{ route('signup') }}" class="space-y-5">
+    <form method="POST" action="" class="space-y-5">
       @csrf
       <div>
         <label class="block mb-1 text-sm font-medium">Name</label>
@@ -32,7 +32,7 @@
         <label class="block mb-1 text-sm font-medium">Password</label>
         <input type="password" name="password" required placeholder="Password" class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"/>
       </div>
-      <button type="submit" class="bg-green-800 text-white w-full py-2 rounded hover:bg-green-700">Signup</button>
+      <button type="submit" class="bg-green-800 text-white w-full py-2 rounded hover:bg-green-700"><a href="{{ route('login') }}"></a>Signup</button>
     </form>
   </div>
 

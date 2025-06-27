@@ -33,4 +33,8 @@ class LandingController extends Controller {
     {
         return view('moduls.landing.signup');
     }
+    public function owner()
+    {
+        return view('moduls.admin.owner');
+    }
 }

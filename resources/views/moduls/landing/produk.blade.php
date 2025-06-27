@@ -27,7 +27,7 @@
   <div id="muslimah" class="content-page hidden bg-white px-24 py-16 text-center mx-auto">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8">
       <div class="flex flex-col items-center">
-        <img src="assets/images/landing/image1.png" alt="Yasmine Dress" class="w-48 h-64 object-cover rounded-md shadow-sm" />
+        <img src="assets/images/landing/Kaftan Tulip.png" alt="Yasmine Dress" class="w-48 h-64 object-cover rounded-md shadow-sm" />
         <h3 class="mt-3 font-medium text-gray-800">Yasmine Dress</h3>
         <div class="flex items-center gap-2 text-sm mt-1">
           <p class="font-semibold text-gray-900">Rp.395.000</p>
