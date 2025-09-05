@@ -3,7 +3,6 @@
 
 
 # e-Nalasha
-a
 e-Nalasha adalah sebuah platform web inovatif yang didedikasikan untuk busana muslimah. Proyek ini bertujuan untuk menyediakan pengalaman belanja online yang mulus dan menyenangkan bagi para wanita Muslim yang mencari pakaian modis dan sesuai syariat.
 
 
